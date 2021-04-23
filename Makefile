@@ -5,3 +5,6 @@ run_exploratory_data_analysis:
 	cd notebooks \
 		&& ipython "Exploratory Data Analysis.ipynb" \
 		&& jupyter nbconvert --to html "Exploratory Data Analysis.ipynb"
+
+preprocessing:
+	python plpred/preprocessing.py 
