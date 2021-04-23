@@ -2,8 +2,7 @@
 
 By Maria Clara Martins
 
-### Descrição: 
-Aplicação de predição de localização subcelular de proteína
+A protein subcellular location prediction program
 
 ## Setup
 
@@ -11,8 +10,11 @@ Aplicação de predição de localização subcelular de proteína
 $ make setup
 ```
 
-## Estrutura do Projeto
+## Project Structure
 
-- `environment.yml`: Arquivo de configuração do ambiente.
-- `requirements.txt`: Bibliotecas necessárias para o projeto, que precisam ser instaladas.
-- `Makefile`: Serve para criar "regras" para centralizar e executar comandos desejados.
+- `environment.yml`: Environment configuration file.
+- `requirements.txt`: Libs needed for the project.
+- `Makefile`: Create "rules" to centralize and execute main commands.
+- `plpred`: Main package directory, with application functions.
+- `data/`: Data directory. 
+    - Raw data is saved in `data/raw` and preprocessed data in `data/processed`.
