@@ -16,5 +16,5 @@ $ make setup
 - `requirements.txt`: Libs needed for the project.
 - `Makefile`: Create "rules" to centralize and execute main commands.
 - `plpred`: Main package directory, with application functions.
-- `data/`: Data directory. 
-    - Raw data is saved in `data/raw` and preprocessed data in `data/processed`.
+- `data/`: Data directory. Raw data are saved in `data/raw`, preprocessed data in `data/processed` and trained models are saved in `data/models` (models are serialized using pickle).
+
