@@ -1,10 +1,10 @@
 import pandas as pd 
 from sklearn.model_selection import train_test_split
-from model import PlpredModel
+from models import BaseModel, PlpredRF, PlpredGB, PlpredSVM, PlpredNN
 from sklearn.metrics import classification_report
 import pickle 
 
-def train_model(file_path:str) -> PlpredModel:
+def train_model(file_path:str) -> BaseModel:
     """
     Train a ML model to classify membrane proteins.
 
@@ -15,7 +15,7 @@ def train_model(file_path:str) -> PlpredModel:
     
     Returns
     -------
-    model: PlpredModel
+    model: BaseModel
     """
     df = pd.read_csv(file_path)
     X = df.drop(['membrane'], axis=1)
@@ -23,7 +23,7 @@ def train_model(file_path:str) -> PlpredModel:
 
     X_train, X_test, y_train, y_test  = train_test_split(X, y)
 
-    model = PlpredModel()
+    model = PlpredRF()
     model.fit(X_train, y_train)
     report = model.validate(X_test, y_test)
 
