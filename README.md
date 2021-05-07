@@ -18,3 +18,21 @@ $ make setup
 - `plpred`: Main package directory, with application functions.
 - `data/`: Data directory. Raw data are saved in `data/raw`, preprocessed data in `data/processed` and trained models are saved in `data/models` (models are serialized using pickle).
 
+- `plpred/models`: provides predictive models based on **Random Forest, Gradient Boosting, Neural Networks (MLP) and SVM.**
+
+- `plpred/models/plpred_rf.py`: **RandomForestClassifier**.
+A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. 
+
+- `plpred/models/plpred_gb.py`: **GradientBoostingClassifier**.
+GB builds an additive model in a forward stage-wise fashion; it allows for the optimization of arbitrary differentiable loss functions.
+
+- `plpred/models/plpred_nn.py`: **MLPClassifier**.
+Multi-layer Perceptron classifier. This model optimizes the log-loss function using LBFGS or stochastic gradient descent.
+
+- `plpred/models/plpred_svm.py`: **C-Support Vector Classification**. 
+The implementation is based on libsvm. The fit time scales at least quadratically with the number of samples and may be impractical beyond tens of thousands of samples. 
+
+
+
+
+
