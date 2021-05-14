@@ -11,3 +11,6 @@ preprocessing:
 
 training:
 	python plpred/training.py
+
+test:
+	python -m pytest
