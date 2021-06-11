@@ -4,6 +4,10 @@ By Maria Clara Martins
 
 **A protein subcellular location prediction program** 🧬
 
+Avaible at: [https://mcm-plpred.herokuapp.com/](https://mcm-plpred.herokuapp.com/)
+
+**Web application developed with Flask.**
+
 ## Setup
 
 ```
