@@ -2,19 +2,17 @@
 
 By Maria Clara Martins
 
-**A protein subcellular location prediction program** 🧬
+## About the project:
 
-Avaible at: [https://mcm-plpred.herokuapp.com/](https://mcm-plpred.herokuapp.com/)
+#### A protein subcellular location prediction program (based on Machine Learning models). 🧬
+
+Find out if the protein is located in **membrane** or **cytoplasm!**
+
+**Avaible at:** [https://mcm-plpred.herokuapp.com/](https://mcm-plpred.herokuapp.com/)
 
 **Web application developed with Flask.**
 
-## Setup
-
-```
-$ make setup
-```
-
-## 📁 Project Structure
+## 📁 Project Structure:
 
 - `environment.yml`: Environment configuration file.
 - `requirements.txt`: Libs needed for the project.
@@ -24,7 +22,16 @@ $ make setup
 - `plpred/models`: provides predictive models based on **Random Forest, Gradient Boosting, Neural Networks (MLP) and SVM.**
 - `tests/`: set of unit tests for Plpred components.
 
-## 👨‍💻 Command line interface (CLI)
+## Running locally (Setup):
+```
+Clone the repository and run:
+$ conda install make (Windows only, "make" comes by default in macOS and Linux)
+$ make setup
+$ make server
+You can view the application at: http://localhost:8000/
+```
+
+## 👨‍💻 Command line interface (CLI):
 #### `plpred-preprocess`:
 ```
 usage: plpred-preprocess [-h] -m MEMBRANE_PROTEINS -c CYTOPLASM_PROTEINS -o OUTPUT
@@ -92,9 +99,9 @@ optional arguments:
 ```
 
 
-## Machine Learning - Models description
+## Machine Learning - Models description:
 
-**RandomForestClassifier**:
+**(Standard) - RandomForestClassifier**:
 A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. 
 
 **GradientBoostingClassifier**:
