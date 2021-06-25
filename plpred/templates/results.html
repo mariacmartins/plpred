@@ -16,26 +16,17 @@
             <h4>Based on Machine Learning models.</h4>
             <p>Find out if the protein is located in membrane or cytoplasm!</p>
         </div>
+        {% if job_result %}
         <div class="row">
             <div class="col-sm-12">
-                <form action="/predict" method="POST">
-                    <div class="form-row">
-                        <div class="col-sm-12 mb-3">
-                            <div class="form-group">
-                                <label for="protein_sequence"><strong>Protein sequence:</strong></label>
-                                <textarea class="form-control" id="protein_sequence" 
-                                name="protein_sequence" placeholder="Aminoacid sequence" rows="10" required></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="submit" value="Submit" class="btn btn-success">
-                        </div>
-                    </div>
-                </form>
+                <hr>
+                <h2>Job</h2>
+                <p>Status: {{ job_result.state }}</p>
+                <p>URL <a href="/results/{{job_result.id}}">{{job_result.id}}</a></p>
+                <p class="alert alert-success">Protein location: <strong>{{job_result.get()}}</strong></p>
             </div>
         </div>
+        {% endif %}
     </div>
 </body>
 </html>

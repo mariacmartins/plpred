@@ -5,4 +5,8 @@ biopython
 pytest
 flask 
 matplotlib
+celery==5.1.1
+click==7.1.2
+redis
+python-dotenv
 -e .
